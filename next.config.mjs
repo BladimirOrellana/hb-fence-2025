@@ -3,7 +3,7 @@ import withPWA from "next-pwa";
 const nextConfig = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ["your-image-domain.com"], // Replace with actual image domain
+    domains: ["your-image-domain.com"],
   },
   pwa: {
     dest: "public",
@@ -11,17 +11,18 @@ const nextConfig = withPWA({
     skipWaiting: true,
   },
   i18n: {
-    locales: ["es", "en"], // Spanish (default), English
+    locales: ["es", "en"],
     defaultLocale: "es",
   },
-  experimental: {
-    turbo: true, // Enable Turbopack
-    appDir: true, // Ensures Next.js App Router is fully enabled
-  },
+  // Remove experimental options temporarily
+  // experimental: {
+  //   turbo: true,
+  //   appDir: true,
+  // },
   webpack(config) {
     config.module.rules.push({
       test: /\.json$/,
-      type: "json", // Fix JSON import errors
+      type: "json",
     });
     return config;
   },
