@@ -1,0 +1,22 @@
+{
+  "name": "HB Fence",
+  "short_name": "HB Fence",
+  "description": "Expert fence installation and repair services in Houston and surrounding areas.",
+  "lang": "en",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "icons": [
+    {
+      "src": "/icons/hb-fence-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/hb-fence-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
