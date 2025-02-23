@@ -1,0 +1,29 @@
+const withPWA = require("next-pwa");
+
+module.exports = withPWA({
+  reactStrictMode: true,
+  images: {
+    domains: ["your-image-domain.com"], // Replace with your actual domain
+  },
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
+  i18n: {
+    locales: ["es", "en"],
+    defaultLocale: "es",
+  },
+  experimental: {
+    // Disable experimental Turbopack and appDir until fully supported by next-pwa:
+    // turbo: true,
+    // appDir: true,
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.json$/,
+      type: "json",
+    });
+    return config;
+  },
+});
